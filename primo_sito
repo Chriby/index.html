@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Il Mio Primo Sito</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background-color: #f0f0f0; }
+        h1 { color: #007bff; }
+    </style>
+</head>
+<body>
+    <h1>Benvenuti sul mio sito gratuito! 🚀</h1>
+    <p>Creato con amore usando GitHub Pages.</p>
+    <a href="https://github.com">Visita il mio profilo</a>
+</body>
+</html>
