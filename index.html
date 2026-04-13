@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>La mia prima App</title>
+    <title>La mia App di Consigli</title>
+    <style>
+        /* Aggiungiamo un po' di stile per farla sembrare un'app vera */
+        body { font-family: sans-serif; text-align: center; padding: 50px; background-color: #e0f7fa; }
+        .box { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        button { padding: 10px 20px; font-size: 16px; background-color: #00796b; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #004d40; }
+        #frase-display { font-size: 20px; font-weight: bold; margin: 20px 0; color: #333; }
+    </style>
 </head>
 <body>
-    <h1>Benvenuti sulla mia App! 🚀</h1>
-    
-    <p>Questa è la mia descrizione e il mio profilo.</p>
-    
-    <img src="foto.jpg" alt="La mia foto" width="300">
 
-    <hr> <h3>Interagisci con l'app:</h3>
-    <p>Hai cliccato <span id="numero">0</span> volte.</p>
-    <button onclick="aggiungi()">Clicca qui!</button>
+    <div class="box">
+        <h1>Generatore di Idee 🚀</h1>
+        <p id="frase-display">Clicca il bottone per ricevere un consiglio!</p>
+        
+        <button onclick="generaFrase()">Nuova Frase</button>
+    </div>
 
     <script>
-        let conteggio = 0;
-        function aggiungi() {
-            conteggio = conteggio + 1;
-            document.getElementById("numero").innerText = conteggio;
+        // 1. Creiamo la lista di frasi (l'Array)
+        const frasi = [
+            "Fai una pausa di 5 minuti e respira.",
+            "Controlla se hai dimenticato un punto e virgola!",
+            "La programmazione è 10% scrittura e 90% risoluzione di problemi.",
+            "Oggi è un ottimo giorno per imparare qualcosa di nuovo.",
+            "Non aver paura dei bug, sono solo lezioni travestite."
+        ];
+
+        // 2. Creiamo la funzione che sceglie la frase
+        function generaFrase() {
+            // Scegliamo un numero a caso tra 0 e la lunghezza della lista
+            const indiceCasuale = Math.floor(Math.random() * frasi.length);
+            
+            // Prendiamo la frase corrispondente al numero scelto
+            const fraseScelta = frasi[indiceCasuale];
+
+            // Visualizziamo la frase nella pagina
+            document.getElementById("frase-display").innerText = fraseScelta;
         }
     </script>
+
 </body>
 </html>
 
