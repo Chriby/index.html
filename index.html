@@ -45,7 +45,15 @@
 
 </body>
 </html>
-
+function generaFrase() {
+    const indiceCasuale = Math.floor(Math.random() * frasi.length);
+    
+    // CONSIGLIO NERD: Stampa il numero scelto segretamente
+    console.log("Il computer ha scelto l'indice numero: " + indiceCasuale);
+    
+    const fraseScelta = frasi[indiceCasuale];
+    document.getElementById("frase-display").innerText = fraseScelta;
+}
 
 
 
