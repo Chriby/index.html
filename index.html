@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Il mio sito</title>
+    <title>La mia prima App</title>
 </head>
 <body>
-    <h1>Benvenuti sul mio sito! 🚀</h1>
-    <p>Visita il mio profilo</p>
+    <h1>Benvenuti sulla mia App! 🚀</h1>
     
-    <!-- Questa immagine DEVE funzionare perché è un link di test sicuro -->
-    <img src="https://placeholder.com" alt="Test">
+    <p>Questa è la mia descrizione e il mio profilo.</p>
+    
+    <img src="foto.jpg" alt="La mia foto" width="300">
 
-    <p>Questa è la mia descrizione</p>
+    <hr> <h3>Interagisci con l'app:</h3>
+    <p>Hai cliccato <span id="numero">0</span> volte.</p>
+    <button onclick="aggiungi()">Clicca qui!</button>
+
+    <script>
+        let conteggio = 0;
+        function aggiungi() {
+            conteggio = conteggio + 1;
+            document.getElementById("numero").innerText = conteggio;
+        }
+    </script>
 </body>
 </html>
-
-<img src="foto.jpg" alt="La mia foto" width="300">
 
 
 
